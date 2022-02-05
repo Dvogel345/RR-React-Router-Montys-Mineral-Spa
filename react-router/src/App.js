@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Packages from './components/Packages'
+import Services from './components/Services'
 
 function App() {
 
@@ -30,6 +31,10 @@ function App() {
               <li>
                 <Link to="/packages">Our Packages</Link>
               </li>
+              <li>
+                <Link to="/services">Services</Link>
+              </li>
+              
             </ul>
           </div>
         </header>
@@ -38,6 +43,7 @@ function App() {
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/packages" render={() => <Packages packages={packages}/>} />
+          <Route path="/services" component={Services} />
         </div>
 
       </Router>

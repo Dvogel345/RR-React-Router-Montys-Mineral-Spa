@@ -92,3 +92,23 @@ li:hover {
   font-size: 25px;
   margin: 20px;
 }
+
+.serviespage {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 25px;
+  font-size: 1.3vw;
+  font-weight: bold;
+  color: white;
+}
+
+.servicespage img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto
+}
+
+.servicespage h1 {
+  border-bottom: 6px white solid;
+  font-size: 5vh;
+}
