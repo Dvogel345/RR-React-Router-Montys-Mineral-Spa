@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 import Home from './components/Home'
 import About from './components/About'
@@ -16,37 +16,32 @@ function App() {
 
   return (
     <div className="App">
-      <Router>
-        <header>
-          <h1 className="title">Welcome to Monty's Mineral SPA</h1>
-
-          <div className="navBar">
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About Us</Link>
-              </li>
-              <li>
-                <Link to="/packages">Our Packages</Link>
-              </li>
-              <li>
-                <Link to="/services">Services</Link>
-              </li>
-              
-            </ul>
-          </div>
-        </header>
-
+      <BrowserRouter>
+          <header>
+            <h1 className="title">Welcome to Monty's Mineral SPA</h1>
+            <div className="navBar">
+              <ul>
+                <li>
+                  <Link to="/about">About Us</Link>
+                </li>
+                <li>
+                  <Link to="/packages">Our Packages</Link>
+                </li>
+                <li>
+                  <Link to="/services">Services</Link>
+                </li>
+              </ul>
+            </div>
+          </header>
         <div>
-          <Route path="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/packages" render={() => <Packages packages={packages}/>} />
-          <Route path="/services" component={Services} />
+          <Routes>
+              <Route path="/home" element={<Home/>}/>
+              <Route path="/about" element={<About/>} />
+              <Route path="/packages" element={<Packages packages={packages}/>} />
+              <Route path="/services" element={<Services/>} />
+          </Routes>
         </div>
-
-      </Router>
+      </BrowserRouter>  
     </div>
   );
 }

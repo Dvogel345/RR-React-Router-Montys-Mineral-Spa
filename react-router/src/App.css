@@ -93,22 +93,24 @@ li:hover {
   margin: 20px;
 }
 
-.serviespage {
+.servies {
   width: 75%;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 0;
   font-size: 1.3vw;
   font-weight: bold;
   color: white;
 }
 
-.servicespage img {
-  width: 50%;
-  height: 50%;
-  margin: 0 auto
-}
-
-.servicespage h1 {
+.services h1 {
   border-bottom: 6px white solid;
   font-size: 5vh;
+  color: white;
+  margin-top: 50px;
+}
+
+.services p {
+  font-size: 3.5vh;
+  color: white;
+  margin-top: 25px;
 }
